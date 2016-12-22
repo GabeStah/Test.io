@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="important-bug-found-ios-real-world-qa-testing-shake-to-undo">Important Bug Found: iOS Real-world QA Testing: Shake-to-Undo</h1>
+<p>Today as we continue our series of <code>crowdtested bugs</code> we're taking a look at the latest iOS bug discovered by the testers here at Test.io: the <code>iOS Shake-to-Undo</code> bug. This bug causes affected apps to crash when attempting to use the <code>Shake-to-Undo</code> feature provided on iOS versions 10 and above. Let's dig a bit deeper into what steps we found that could reproduce the bug and how these sorts of defects are often overlooked during production testing, only to be later discovered by <code>crowdtesting</code> after release.</p>
+<h2 id="reproducing-the-bug">Reproducing the Bug</h2>
+<p>To reproduce the <code>iOS Shake-to-Undo</code> bug, we need to follow just a handful of simple steps:</p>
+<ol style="list-style-type: decimal">
+<li>Run the <code>Red Bull TV</code> application version <code>3.3.0.38</code>.</li>
+<li>Click on the magnifying glass.</li>
+<li>Type at least one letter into the input field.</li>
+<li>Click on the <code>X (delete)</code> button on the right end of the input field.</li>
+<li>Shake the device.</li>
+<li>When the confirmation window pops up with option <code>Undo typing</code>, click on <code>Undo</code>.</li>
+</ol>
+<p><strong>Expected Result</strong></p>
+<p>The application should do nothing, since there is no text to undo at this point, as it was already deleted by clicking the <code>X (delete)</code> button.</p>
+<p><strong>Actual Result</strong></p>
+<p>The application simply crashes completely. It attempts to delete the letters that were last entered, but fails to do so since that text no longer exists. Instead of gracefully resolving this conflict and ignoring the missing text, it crashes entirely.</p>
+<h2 id="similar-examples">Similar Examples</h2>
+<p>This is hardly the first time Apple has released a version of iOS with a faulty feature that presents a bug which could potentially impact hundreds of applications. In late November of 2016, another similar <code>crowdtested</code> bug was discovered by users of the common discussion site <a href="https://www.reddit.com/r/jailbreak/comments/5e5y9r/discussion_warning_this_video_kills_your_iphone/"><code>Reddit</code></a>. This defect, which was known as the <code>corrupt .mp4</code> bug, would cause most iOS devices to slow down and eventually freeze up entirely when playing a corrupt <code>.mp4</code> video file. The reproduction of the bug in this case was simply a matter of opening a corrupted video file in a variety of iOS application, which when then cause iOS to generate an endless loop in the video player.</p>
+<p>It was discovered that this issue would occur on a variety of modern iOS versions from 9 - 10+, and could also occur within a variety of applications from <code>AirDrop</code> and <code>Photos App</code> to <code>Mail</code> and even <code>Instagram</code>. Once the video was played for a few seconds, an infinite loop would begin and the phone itself would become slower and slower, until eventually a hard freeze would occur. The only way to resolve this issue was with a hard reset by holding the <code>power</code> and <code>home</code> buttons simultaneously. Thankfully this issue caused no permanent harm, as affected devices were able to function normally following a hard reset.</p>
+<p>Both the <code>corrupt .mp4</code> bug and the more recent <code>iOS Shake-to-Undo</code> bug prove is that properly <code>crowdtesting</code> software, even after release, is an extremely valuable tool that can often catch defects that are never even considered when performing standard in-house testing procedures. While neither of these bugs present any permanent damage to the device, it's all too easy to imagine a loss of temporary data, such as filling out a web form or writing an email, when a hard freeze occurs and forces a reset of the device.</p>
+<hr />
+<p><strong>SOURCES</strong></p>
+<ul>
+<li>https://www.reddit.com/r/jailbreak/comments/5e5y9r/discussion_warning_this_video_kills_your_iphone/?st=IVSKMNC4&amp;sh=45a49cc1</li>
+<li>https://www.reddit.com/r/apple/comments/5e6jo7/warningpsa_newly_released_video_crashed_ios_10/</li>
+</ul>
+</body>
+</html>
