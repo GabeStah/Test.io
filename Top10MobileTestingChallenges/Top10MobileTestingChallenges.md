@@ -62,7 +62,7 @@ Testers should ensure that any location-dependent functionality is properly test
 
 While it may come as no surprise that Android and iOS devices have become the excessively dominant force in the war for mobile users, at [`roughly 96% combined`](http://www.idc.com/promo/smartphone-market-share/os), other legacy devices are still in use by a good chunk of mobile users, and these devices cannot be ignored by developers nor testers alike.
 
-BlackBerry, Windows Phone, and Symbian OS (powering legacy Nokia devices) all still remain active by a small, but die-hard percentage of the mobile market.  Testing procedures must, therefore, take into account the existence of such devices, particularly when the application in question could feasibly be accessed and run on these legacy devices.
+BlackBerry, Windows Phone, Symbian OS (powering legacy Nokia devices), and even older Android/iOS devices all still remain active by a small, but die-hard percentage of the mobile market.  Testing procedures must, therefore, take into account the existence of such devices, particularly when the application in question could feasibly be accessed and run on these legacy devices.
 
 ---
 

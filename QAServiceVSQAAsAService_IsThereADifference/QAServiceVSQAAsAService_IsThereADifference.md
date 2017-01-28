@@ -1,12 +1,8 @@
 # QA Services vs QA as a Service: Is There a Difference?
 
-Within any project, proper quality assurance (`QA`) is a fundamental and highly necessary component, necessary to produce the most functional and intended resulting product.  With software in particular, the role of quality assurance takes on slightly more specific requirements, in order to ensure the final result is of the highest quality.
+Quality assurance services (`QA Services`) and quality assurance as a service (`QA as a Service`) are similar terms and, to most people, even similar concepts, yet there's a few important differences between the two.  Centered around the core concepts of `outsourcing` vs `crowdsourcing` -- which underpin both terms, respectively -- fully grasping the subtle distinctions between the two is critical when planning the testing procedures for your own projects.
 
-While software quality assurance practices can range from determining the best software development methodology to project management techniques, the most fundamental component of software QA is that of developing and implementing proper testing procedures.  Ensuring a high standard of testing invariably assures a high quality of the final product.
-
-Modern software development life cycles demand a plethora of various procedures and methodologies, depending on the specific needs of the project, but, by and large, the inclusion of proper quality assurance procedures cannot be neglected.  The challenge then becomes: What software quality assurance process is the best?  What will best meet the needs of your team and your project, while avoiding as many unnecessary costs as possible?
-
-In this article, we'll examine both the similarities and the dramatic, fundamental differences between quality assurance services (`QA Services`) and quality assurance as a service (`QA as a Service`).  We'll delve into why it's easy to fall into the trap of assuming `QA Services` are the best (and only) solution available, and how `QA as a Service` can provide unique benefits at a fraction of the cost.
+In this article, we'll examine both the similarities and the fundamental differences between `QA Services` and `QA as a Service`.  We'll delve into why it's easy to fall into the trap of assuming `QA Services` are the best (and only) solution available, and how `QA as a Service` can provide unique benefits at a fraction of the cost.
 
 ## Outsourcing vs Crowdsourcing
 
