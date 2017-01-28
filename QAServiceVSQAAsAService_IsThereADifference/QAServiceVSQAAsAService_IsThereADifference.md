@@ -1,6 +1,6 @@
 # QA Services vs QA as a Service: Is There a Difference?
 
-Quality assurance services (`QA Services`) and quality assurance as a service (`QA as a Service`) are similar terms and, to most people, even similar concepts, yet there's a few important differences between the two.  Centered around the core concepts of `outsourcing` vs `crowdsourcing` -- which underpin both terms, respectively -- fully grasping the subtle distinctions between the two is critical when planning the testing procedures for your own projects.
+Quality assurance services (`QA Services`) and quality assurance as a service (`QA as a Service`) are similar terms and, to most people, even similar concepts, yet there are a few important differences between the two.  Centered around the core concepts of `outsourcing` vs `crowdsourcing` -- which underpin both terms, respectively -- fully grasping the subtle distinctions between the two is critical when planning the testing procedures for your own projects.
 
 In this article, we'll examine both the similarities and the fundamental differences between `QA Services` and `QA as a Service`.  We'll delve into why it's easy to fall into the trap of assuming `QA Services` are the best (and only) solution available, and how `QA as a Service` can provide unique benefits at a fraction of the cost.
 
