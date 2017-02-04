@@ -1,46 +1,60 @@
 # Five Tips for Prioritizing Regression Test Automation
 
+It is all too common in DevOps circles to live by the creed: "automate everything."  There can be little doubt that automated regression testing is a powerful tool, and when used correctly, can provide an extremely stable automated testing suite, off which can be built drastic and volatile tests.  However, regression test automation can be a devilish scoundrel, as poorly designed tests can lead to lousy requirements coverage, wasted development time, or in the worst of cases, broken builds.
 
-> The usage frequency of a function or the probability of failure in software use. If certain functions of the system are used often and they contain a fault, then the probability of this fault leading to a failure is high. Thus, test cases for this function should have a higher priority than test cases for a less-often-used function.
+In this article, we'll explore five tips to help you prioritize your automated regression testing to ensure the most critical tests are running first and foremost.  In doing so, we'll also see a few testing scenarios where automated testing may not be the best solution, and instead, where the delicacy and adaptability of humans via `crowdtesting` may be favorable.
 
-> Failure risk. Risk is the combination (mathematical product) of severity and failure probability. The severity is the expected damage. Such risks may be, for example, that the business of the customer using the software is impaired, thus leading to financial losses for the customer. Tests that may find failures with a high risk get higher priority than tests that may find failures with low risks.
+## 1. Focus on Customers and Revenue
 
-> The visibility of a failure for the end user is a further criterion for prioritization of test cases. This is especially important in interactive systems. For example, a user of a city information service will feel unsafe if there are problems in the user interface and will lose confidence in the remaining information output.
+One of the simplest prioritization techniques to implement is the focus on test which are critical to customers.  Rather than relying on complex algorithms or metrics to prioritize your test suite, this technique simply requires one or two individuals to go through the test list and evaluate each test case with one thought in mind: __How impactful is this test case for the customer?__  A [`customer-allotted priority`] ensures that test priorities remain customer-oriented by aligning the prospective needs and wants of the customer with the prioritization of the tests within the test suite.
 
-> Test cases can be chosen depending on the priority of the requirements. The different functions delivered by a system have different importance for the customer. The customer may be able to accept the loss of some of the functionality if it behaves wrongly. For other parts, this may not be possible.
+Once customer needs have been established and worked into test ordering, the next logical step is to focus on `revenue priority` throughout the test suite.  Arranging tests based on their likely impact on incoming revenue is a simple yet powerful technique that forces the test suite to automatically hone in on the most mission-critical test cases for getting a fully-functional and well-rounded product out the door at the end of the development life cycle.
 
-> Besides the functional requirements, the quality characteristics may have differing importance for the customer. Correct implementation of the important quality characteristics must be tested. Test cases for verifying conformance to required quality characteristics get a high priority.
+## 2. Maintain a Lean Test Suite
 
-> Prioritization can also be done from the perspective of development or system architecture. Components that lead to severe consequences when they fail (for example, a crash of the system) should be tested especially intensively.
+Regression testing inherently requires continuous testing throughout the software development life cycle in order to quickly detect faults and implement necessary fixes.  As the size of your test suite expands, it becomes an absolute necessity to frequently remove tests from the test suite, lest the suite become too bloated, slow, and unwieldy.
 
-> Complexity of the individual components and system parts can be used to prioritize test cases. Complex program parts should be tested more intensively because developers probably introduced more faults. However, it may happen that program parts seen as easy contain many faults because development was not done with the necessary care. Therefore, prioritization in this area should be based on experience data from earlier projects run within the organization.
+Finding the right balance between the overall requirement coverage and the speed of the test suite can be challenging, so often it is useful to implement a minimization technique to help you keep your test suite as lean and mean as possible.  Using a minimization technique, such as the [`greedy algorithm`], allows you to easily reduce the size of your test suite in a logical and heuristic manner by identifying tests which cover the broadest spectrum of faults, and then loosely prioritizing tests within the suite based on that coverage.
 
-> Failures having a high project risk should be found early. These are failures that require considerable correction work that in turn requires special resources and leads to considerable delays of the project.
+Maintaining a smaller test suite is particularly important when dealing with automated testing suites, since regression testing often demands that the test suite is executed with every build and for every change made to the project.  While ignoring this requirement and splitting the test suite into smaller chunks is a viable options to reduce execution time, that can potentially cause it's own set of problems if a particular test is delayed too long into development or for two many subsequent builds.  Once that test does finally come around again, it may shed light on faults that were unseen before and require _even more_ regression than if the full suite had been used in the first place.
 
-## Tip 1
+## 3. Favor Tests Which Avoid the UI
 
-> - Find stuff that isn't changing much, is important to customers, revenue, etc., and can be completely deterministic.
+It is no doubt possible to create automated tests which aim to test the UI and user functionality of the product.  Many libraries exist to help developers and QA teams automate testing at the interface level, across a wide range of languages.  However, testing at the UI level is largely a practice that should come as a last resort in terms of priority within automated regression testing.  By its very nature, the UI is extremely volatile, as often even when the functionality that is behind the UI is still working correctly, minor changes in the UI itself can cause test failures left and right.  Therefore, even in the most well designed test suites, UI tests will frequently fail during automated regression testing, and require much further analysis or even manual testing to resolve.
 
-## Tip 2
+Instead, automated regression tests should focus on lower level layers of the product, such as unit testing, the API, and service integrations.  Allow the automated power of computers to handle the more of the rapid, low-level testing, while allowing humans, via `crowdtesting` or in-house QA, to deal with interface testing.  Humans are great at finding "fit-and-finish" issues and can easily adapt to small changes in the interface, whereas computers and automated tests tend to find it extremely challenging.
 
-> - Automate simple tests of basic functions and keep this suite small and fast so you can run it with every build.
+## 4. Use Metrics
 
-## Tip 3
+While there's no perfect prioritization method that fits the needs of every project nor every team, you should make every effort to implement practices which take advantage of common, measurable metrics within the project.  Commonly use metrics like the [`Average Percentage of Faults Detected`] (APFD) can be utilized to prioritize your test cases, but it's important to analyze the possibilities available to you -- particularly those metrics most relatable to your project -- to find the best solution.
 
-> - Avoid things that are dependent on the way an interface looks. Humans are good at finding "fit-and-finish" issues and in being robust to small changes in the interface. Computers not so much.
+If you can afford the overhead, one metric you can measure to truly help is `Total Statement Coverage`, which aims to measure how much of your actual code, line-by-line or statement-by-statement, is covered by the test suite.  For obvious reasons, using this metric can be extremely cumbersome and requires a great deal of effort on behalf of developers and testers alike to ensure the full code base is covered.
 
-## Tip 4
+The logical step up from there, and a metric that is far more commonly used, is `Total Functional Coverage`, which measures the quantity of `functions` in the code base which are in some way covered by the test suite.  Even as a step up from `Statement Coverage`, it is not always feasible (nor necessary) to build tests which cover every function, so it is common to implement this metric by also tacking on some form of prioritization of your functionality to begin with.  Deciding which functions (and therefore what functionality) is most critical, and assigning those higher scores to then use for ordering the tests in the test suite is a tried and true practice.
+
+It can also be beneficial to step away from the code side with your metrics, and instead use a `Fault Severity` metric to help prioritize your tests.  With this technique, each fault that is unearthed during the development life cycle is assigned its own severity or priority rating from low to high.  With that simple metric in hand, you're then able to easily prioritize test cases based on the requirements and severity level of the faults which those tests cover.
+
+## 5. Prioritize Unchanging Tests
+
+It's all too common for customers (or even developers) to try to make too many rapid changes to the code base within too short a timespan, which invariably leads to massive volatility, flakier tests, and higher test failure rates.  Worst of all, if tests are flaky and are frequently failing, it's often worse to have that flaky test in place than simply having no test there at all.  The sheer existence of screwy tests with volatile results requires a wasted time investment from developers to locate the issue and find a solution, all the while sunk costs are climbing and forward momentum on the project is slowing down.  In the most dire scenarios, such tests can be build-breakers, preventing the next iteration from moving forward as scheduled.
+
+For these reasons, it's best to prioritize automated tests that handle code and functionality that rarely changes, or when they do change, are subject to fairly minor alterations.  By prioritizing these tests higher in the test suite, it generates a strong backbone of automated testing off which to expand.  As more and more volatile tests are added to the lower priority levels of the suite, the team can be more confident in those tests which remain at the top of the priority to continue to perform as expected and not cause any breakages along the way.
+
+For test cases which _do_ deal with constant changes, it's then often less time investment and lower cost to utilize human intervention.  By employing `crowdtesters` to the most unstable tests and components of the product, there's a nice balance of capabilities, where automated tests are handling the stuff they're good at, while humans are integrated to deal with the volatile and subtler tests.
+
+
 
 > - If you're going to break the build, a flaky test is worse than no test at all because it will waste developers' time and maintenance costs are high. If your tests are flaky, use those as a guide for exploratory testers before you deploy, never as a build-blocker.
+> - Find stuff that isn't changing much
 
-## Tip 5
+---
 
 > - Remember that software can pass 100% of its regression test cases and be profoundly broken to the user because you can't write test cases for everything. If your testers find hotspots, consider refactoring for better developer testability in preference to writing more automated GUI tests.
 
 
 > we don't need to tell them what GUI/functional test automation is, or regression, etc.
 
-> It is common in DevOps circles to say that you should "automate everything." We want to make sure that we're not "anti-automation" but the fact remains that automated functional tests are often flaky and you should prioritize certain ones over others. So we want to recommend how to prioritize automation while suggesting that in other areas, human testers remain a great option (particularly crowdtesters in some cases). To ship fast, there's a lot of other automation work you should do before automating all of your functional test cases: making sure you can deploy fast, making sure any developer can get a test environment fast, unit tests, integration tests, etc.
+
 
 > https://docs.google.com/document/d/1L_DWV66bqZdvAxwK_NszyvuqhVNLo_s6-f9vgu9oAxM/edit
 
@@ -54,8 +68,15 @@
 > - If you're going to break the build, a flaky test is worse than no test at all because it will waste developers' time and maintenance costs are high. If your tests are flaky, use those as a guide for exploratory testers before you deploy, never as a build-blocker.
 > - Remember that software can pass 100% of its regression test cases and be profoundly broken to the user because you can't write test cases for everything. If your testers find hotspots, consider refactoring for better developer testability in preference to writing more automated GUI tests.
 
+[`greedy algorithm`]: https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/PASTE05.pdf
+[`Average Percentage of Faults Detected`]: http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.915&rep=rep1&type=pdf
+[`customer-allotted priority`]: http://research.ijais.org/volume6/number7/ijais14-451081.pdf
+
 ---
 
 __SOURCES__
 
 - http://www.sciencedirect.com/science/article/pii/S1877050916001514
+- http://research.ijais.org/volume6/number7/ijais14-451081.pdf
+- https://www.cs.purdue.edu/homes/xyzhang/fall07/Papers/PASTE05.pdf
+- http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.915&rep=rep1&type=pdf
