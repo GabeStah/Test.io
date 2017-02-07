@@ -1,5 +1,7 @@
 # [OUTLINE] DevOps Best Practices: 5 Cool Things You Didn't Know You Could Automate
 
+> KEYWORD: devops best practices
+
 - Introduction, which provides a broad mention of DevOps most common/well-known practices.
 - Mention that this article aims to give some additional, not so obvious things that can be automated within DevOps.
 
