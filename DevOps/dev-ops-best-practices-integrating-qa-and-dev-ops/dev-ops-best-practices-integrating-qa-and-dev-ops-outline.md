@@ -1,4 +1,4 @@
-# [Outline] DevOps Best Practices: Integrating QA and DevOps
+# [OUTLINE] DevOps Best Practices: Integrating QA and DevOps
 
 > KEYWORDS: devops best practices
 
