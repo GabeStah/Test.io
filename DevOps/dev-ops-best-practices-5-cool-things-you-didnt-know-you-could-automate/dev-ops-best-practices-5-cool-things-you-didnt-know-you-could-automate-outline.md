@@ -34,13 +34,16 @@ http://searchitoperations.techtarget.com/news/450302065/Sparta-counters-DevOps-n
 
 https://www.vagrantup.com/
 
-## Automating Grocery Checkout
+## Automating Code Review
 
-- While fairly well-known, it could be interesting to discuss the introduction of Amazon Go, the automatic grocery store recently announced.
-- Discuss the critical DevOps components that had to be automated for this idea to come to fruition.
+- Discuss the basic premise and benefits of `automated code review` throughout development life cycle.
+- Highlight the growth of practices like `pair programming` and how automated code review takes those benefits further with checks for style consistency, coverage, etc.
+- Provide examples of common code review automation tools.
+- Emphasize the compatibility between `continuous integration` practices and `automated code review`.
 
-https://www.wired.com/2016/12/amazon-go-grocery-store/
-http://www.geekwire.com/2016/amazon-go-works-technology-behind-online-retailers-groundbreaking-new-grocery-store/
+https://codeclimate.com/
+https://www.codacy.com/
+https://codebeat.co/
 
 ## Automating Human Feedback
 
