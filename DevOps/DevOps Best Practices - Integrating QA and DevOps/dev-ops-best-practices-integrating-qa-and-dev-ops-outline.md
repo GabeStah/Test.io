@@ -5,7 +5,7 @@
 - Introduction that briefly outlines the topic at hand and the main points being raised:
 - Continuous delivery & continuous integration can be combined with QA
 - QA is a necessity in modern development due to failure of automation to cover all scenarios
-- Modern QA should act like a fitness regimen for DevOps, not just locating and preventing bugs from entering production, but by promoting stability through continuous improvement.
+- Modern QA should act like a fitness regimen for DevOps, not just locating and preventing bugs from entering production, but also by promoting stability through continuous improvement.
 
 ## QA Supports Continuous Delivery
 
