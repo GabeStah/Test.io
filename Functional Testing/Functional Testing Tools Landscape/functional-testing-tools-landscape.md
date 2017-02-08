@@ -1,4 +1,4 @@
-# Functional Testing Tools Landscape
+# Functional Testing Tools Landscape [v2]
 
 Functional testing is a critical component within the overall quality assurance process, and is necessary when developing an effective and stable final product.  While the basic concept of functional testing is simple, the implementation of performing modern functional testing often requires a variety of tools to handle everything from data generation and automation to test management and human testing.
 
@@ -8,9 +8,11 @@ Throughout this article we'll examine five key functional testing tools in great
 
 One of the most well-known and oft-heralded tools of modern functional testing is the emergence of `test automation`.  The beauty of automated tests are that they allow developers and QA departments to easily design, write, execute, and review tests, which can then be automatically performed at will, whether that means prior to a new build release or even after ever minor code change is made.
 
-One major benefit of automated tests is the ability define a series of pre-defined actions (such as pushing a set of users through the `CreateUser` procedure), then automatically performing those pre-defined actions hundreds or even thousands of times in a matter of seconds, before analyzing the output in comparison to the expected results.  Extrapolating this basic concept further and further -- throughout the code base of the entire application -- allows development teams to generate a breadth of automated functional tests that can be reused throughout the entirety of the software development life cycle.
+One major benefit of automated tests is the ability define a series of pre-defined actions (such as pushing a set of users through the `CreateUser` procedure), then automatically performing those pre-defined actions at a rapid pace, before analyzing the output in comparison to the expected results.  Extrapolating this basic concept further and further -- throughout the code base of the entire application -- allows development teams to generate a breadth of automated functional tests that can be reused throughout the entirety of the software development life cycle.
 
 Automated testing can also be used for certain tasks and comparisons that are largely infeasible for a manual tester.  For example, an automated test can often peek into the inner-workings of the code itself, examining the contents of memory, files, data sets, and states of execution to form a well-rounded analysis of the application's behavior during the test proceedings.
+
+On the other hand, while automated functional tests provide the benefit of running tests against code or larger functional components automatically, these tests are also finicky, requiring some level of monitoring and maintenance from members of the team.
 
 ## Test Data Generators
 
@@ -38,13 +40,15 @@ The clear advantage to maintaining a centralized location for all this test-rela
 
 Beyond the innate benefits that a test management tool provides, most popular services also integrate with other testing tools you might be using, such as issue trackers, test automation tools, hosted environments, and code repositories.
 
-## Crowdtesting
+## Crowdtesting Platforms
 
-While functional testing tools such as automated testing are great for handling test cases which aim to test and verify the inner workings of software functionality, even the most well-developed suite of automated tests cannot cover every avenue.  This is where the power of `crowdtesting` as a functional testing tool comes to fruition.  Unlike automated testing, crowdtesting allows tests to be performed in the real world, by a variety of highly-skilled and professional testers, across a plethora of platforms and devices, within environments and from physical locations that simply wouldn't be feasible otherwise.
+While functional testing tools such as automated testing are great for handling test cases which aim to test and verify the inner workings of software functionality, even the most well-developed suite of automated tests cannot cover every avenue, nor can they find problems that the developers didn't anticipate.  This is where the power of `crowdtesting` as a functional testing tool comes to fruition.  Unlike automated testing, crowdtesting allows tests to be performed in the real world, by a variety of highly-skilled and professional testers, across a plethora of platforms and devices, within environments and from physical locations that simply wouldn't be feasible otherwise.
 
-This diversity in testing, along with the element of human touch, ensures that the tool of crowdtesting is extraordinarily powerful when appropriately applied throughout the software development life cycle.  Crowdtesting provides feedback from testers that is personalized, emulating the experiences that real users are likely to have with the software.
+This diversity in testing, along with the element of human touch, ensures that the tool of crowdtesting is extraordinarily powerful when appropriately applied throughout the software development life cycle.  Crowdtesting provides feedback from testers that is personalized, emulating the experiences that real users are likely to have with the software.  Moreover, humans are robust to small changes in the interface that can cause problems for automated functional tests, so crowdtests are particularly useful when changes occur rapidly.
 
 Best of all, crowdtesting allows for `exploratory testing` to occur throughout the development life cycle, which is something that automated testing can rarely encapsulate.  While an automated testing suite may attempt to consider all avenues of attack or areas of potential issue for a test case, it is often the case that human testers have the knowledge and experience to think _even further_ outside the box, providing insight and discovering issues that weren't even considered in the first place by the developers creating the automated tests.
+
+While a crowdtesting platform engages human testers, from the end-user's perspective, it should function as a software product, just as the other categories of software here do.  So, as the QA manager, product manager, or engineering lead, you should be able to order tests with a GUI or API, see results, and map your progress as easily as you can with the other tools in your toolbox.
 
 ---
 
