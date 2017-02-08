@@ -1,4 +1,4 @@
-# Functional Testing Tools Landscape [v2]
+# Functional Testing Tools Landscape
 
 Functional testing is a critical component within the overall quality assurance process, and is necessary when developing an effective and stable final product.  While the basic concept of functional testing is simple, the implementation of performing modern functional testing often requires a variety of tools to handle everything from data generation and automation to test management and human testing.
 
