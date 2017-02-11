@@ -1,6 +1,6 @@
 # What is Regression Testing?
 
-`Regression testing` is a fairly well-known term that is used frequently in the realm of software development.  While the Internet is already full of numerous explanations of what regression testing is, in this article we're taking a different spin on this idea.  Not only will we explore what regression testing is and where it's most commonly implemented, but we'll also examine why `exploratory testing` should also be considered a key component in any proper regression testing methodology.
+If you’ve worked in software, you probably know what `regression testing`, but  while the Internet is already full of explanations of regression testing, in this article we're taking a different spin on this idea -- that a regression test should be a test, and not merely a check.  We'll explore what regression testing is and where it's most commonly implemented, but we'll also examine why `exploratory testing` should also be considered a key component in any proper regression testing methodology.
 
 ## What is Regression Testing?
 
@@ -12,9 +12,11 @@ The process of refactoring is so common and critical within nearly every softwar
 
 It is this common marriage of `regression testing` and refactoring that is so critical to the quality assurance of many modern software development life cycles.  As refactoring takes place, changing (and ideally improving) the code, regression testing must come along to verify the efficacy and stability of those changes.
 
-Unfortunately, it is all too common for `regression testing` to focus solely on the success rate of tests, whether automated or manual, without fully evaluating if this indicates the software is functioning as expected.  Furthermore, when developers make too many changes to the code base in too short a timespan, this often leads to instability of the software, the introduction of numerous bugs, and much higher fault rates.
+Unfortunately, it is all too common for `regression testing` to focus solely on the success rate of tests, whether automated or manual, without fully evaluating if this indicates the software is functioning as expected.  In some instances, making changes to fix bugs can uncover functional problems that were not addressed by the previous test suite, making `exploratory testing` that much more beneficial.  Furthermore, when developers make too many changes to the code base in too short a timespan, this often leads to instability of the software, the introduction of numerous bugs, and much higher fault rates.
 
 It should, therefore, come as no surprise that implementation of an `exploratory testing` methodology into the refactoring and `regression testing` process is a simple, yet powerful, step that can greatly improve the quality of the software.
+
+In many cases, a human will catch an unknown issue even where a test case indicates no issue exists.  For example, envision a web project that contains a number of registration fields.  Test cases are developed to A bug is discovered at some point during regression testing that prevented some of the 
 
 For example, if the codebase for a web project is due for a refactoring pass on the systems that handle user sessions (signing in/out, security, navigating, etc.), it can be incredibly beneficial to perform a crowdtesting pass on those systems before any refactoring takes place. More often than not, testers may find bugs or even point to improvements that would dramatically alter the end-result of the system and how it functions, saving a great deal of unnecessary or even wasted coding time during the subsequent `regression testing` procedures.
 
@@ -26,7 +28,7 @@ The frequency of `regression testing` will vary from project to project, but mos
 
 On the other hand, it's important to note the drawbacks of `regression testing` as it relates to testing frequency.  In particular, when regression testing implementations focus primarily on automated functional tests, there can be a tendency for tests of this nature to be rather volatile and unstable, often requiring a good deal of personal intervention on the part of developers or QA members to babysit the test suite and confirm the performance and the results.
 
-For this reason, any suite of regression tests should also include a phase of `exploratory testing`.  Through `crowdtesting` or other methods, exploratory testing during `regression testing` empowers individual testers with the responsibility and freedom to examine, tinker, and unveil issues or avenues of inquiry that were not considered previously.
+For this reason, a final suite of regression tests should also include a phase of `exploratory testing` before the system goes into production.  Through `crowdtesting` or other methods, exploratory testing during `regression testing` empowers individual testers with the responsibility and freedom to examine, tinker, and unveil issues or avenues of inquiry that were not considered previously.
 
 ## How is Regression Testing Best Implemented?
 

@@ -1,4 +1,4 @@
-# [OUTLINE v2] DevOps Best Practices: Integrating QA and DevOps
+# [OUTLINE v3 FINAL] DevOps Best Practices: Integrating QA and DevOps
 
 > KEYWORDS: devops best practices
 
@@ -13,7 +13,7 @@
 - With fully-automated workflows, all builds that pass automated testing are pushed ahead; highlight the importance of handling not-so-easily automated tests, particularly as they can (and should) play a factor in whether or not the build is pushed to production.
 - Discuss the importance of exploratory testing to uncover hidden bugs, as automated test cases are only as robust as when they were originally created.
 
-## Without Support, Continuous Integration is Insufficient
+## Continuous Integration != Continuous Delivery != Customer Success
 
 - Discuss how many organizations see continuous integration -- along with the associated tools and automated tests that come with it -- as the be-all, end-all of QA needs.
 - Highlight the dangers of this approach, particularly when evaluating all tests as successful because TravisCI or another tool said all was well (not seeing the forest for the trees).
@@ -28,6 +28,10 @@
 - Detail the importance of an organization having a process for determining whether software is ready to ship to customers, and that that process should have multiple inputs, some of which demand human judgment.
 
 > What we've seen over the past 5-10 years is that the QA function has bled away into different groups. The Product team owns part of it, the engineering team another part, etc. The important thing is that the function continues to exist, even if it doesn't exist in a team called by that name. 
+
+> Someone must represent the customer in the development process.  Whether you call that QA or something else, if your customers are human, this is going to involve some human judgment.
+
+> You might even think about carrying the "fitness" metaphor through the piece, where the "event" you're training for -- the mountain you're climbing -- is being out there for customers. And your QA team is telling you not just whether your vital signs are okay, but whether you really understand the terrain, you know what to do if things go bad, etc.
 
 ## Modern QA is a Fitness Regimen
 
