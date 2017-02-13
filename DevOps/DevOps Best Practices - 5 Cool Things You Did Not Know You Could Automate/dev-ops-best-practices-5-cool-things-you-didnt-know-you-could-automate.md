@@ -61,16 +61,20 @@ https://www.vagrantup.com/
 
 ## Automating Code Review
 
+While most of the automated tasks associated with DevOps tend to focus on managing code once its written, there's something to be said for the practice of `automatic code reviews`.  In the simplest terms, an `automatic code review` aims to evaluate existing code, using robust services and applications, by checking for proper style, complexity, security, duplication, and coverage... automatically.  There are a number tools that can be used for `automated code review`, including [`Code Climate`], [`Codacy`], and [`Codebeat`], but every service will largely aim to perform the same basic role within your DevOps.
+
+`Automated code review` provides many of the same benefits of the practice known as [`pair programming`], which places two developers at the same desk and has them work in tandem on active development.  Rather than having another human physically sitting with each developer, an automated code review service aims to provide many of those same benefits, by verifying code quality and coverage with simple interfaces; all while being compatible with existing automated DevOps practices such as `continuous integration` and `continuous deployment`.  
+
 - Discuss the basic premise and benefits of `automated code review` throughout development life cycle.
 - Highlight the growth of practices like `pair programming` and how automated code review takes those benefits further with checks for style consistency, coverage, etc.
 - Provide examples of common code review automation tools.
 - Emphasize the compatibility between `continuous integration` practices and `automated code review`.
 
-https://codeclimate.com/
-https://www.codacy.com/
-https://codebeat.co/
+
 
 ## Automating Human Feedback
+
+
 
 - Emphasize the importance of human feedback throughout the development life cycle.
 - Focus on the ability of testers to provide detailed insight into uncommon scenarios and unforeseen test cases.
@@ -83,9 +87,21 @@ https://codebeat.co/
 [`PCI`]: https://www.pcisecuritystandards.org/
 [`Vagrant`]: https://www.vagrantup.com/
 [`Chef`]: https://www.chef.io/
+[`Code Climate`]: https://codeclimate.com/
+[`Codacy`]: https://www.codacy.com/
+[`Codebeat`]: https://codebeat.co/
+[`pair programming`]: https://en.wikipedia.org/wiki/Pair_programming
 
 ---
 
 **SOURCE**
 
-- 
+- https://blog.codeship.com/immutable-infrastructure/
+- http://chadfowler.com/2013/06/23/immutable-deployments.html
+- http://searchitoperations.techtarget.com/news/450302397/Programmable-infrastructure-fends-off-configuration-drift
+- http://searchitoperations.techtarget.com/feature/Immutable-infrastructure-takes-build-automation-to-the-systems-level
+- http://searchitoperations.techtarget.com/definition/immutable-infrastructure
+- http://searchitoperations.techtarget.com/news/450302065/Sparta-counters-DevOps-naysayers-with-compliance-automation
+- https://codeclimate.com/
+- https://www.codacy.com/
+- https://codebeat.co/
