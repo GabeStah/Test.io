@@ -70,11 +70,15 @@ While most of the automated tasks associated with DevOps tend to focus on managi
 - Provide examples of common code review automation tools.
 - Emphasize the compatibility between `continuous integration` practices and `automated code review`.
 
-
-
 ## Automating Human Feedback
 
+While the concept may seem contradictory at first, another powerful tool that can be automated as part of your DevOps process is `automated human feedback` through `crowdtesting`.  In cannot be overstated how critical feedback is during the entire software development life cycle.  Whether that feedback comes from other developers, users, customers, or testers, it is imperative that the team is able to gather, analyze, and adapt to that feedback as effectively as possible.  This need to adapt to incoming feedback is particular important for projects following a form of `agile` development, where iteration and adaptation is a staple of the methodology.
 
+In the case of `automating human feedback` via `crowdtesting`, this can provide your project and organization with unique insight into what may otherwise be uncommon scenarios or unforeseen test cases.  It is common for automated testing solutions -- whether for unit testing, functional testing, or otherwise -- to remain somewhat blind to potential issues or bugs that professional human testers are experienced and trained to seek out.  Moreover, even if all automated tests pass, that isn't a guarantee that the software is fully-functional and ready for production.  This is a great reason to slip `crowdtesting` into the mix, so human testers can perform testing and provide curated feedback.
+
+Implementation of `automating crowdtesting feedback` will vary from one tool to the next, but services like [`Test.io`] provide an API to trigger tests based on your own conditional requirements, so feedback can be gathered automatically, alongside your other automated DevOps practices.
+
+Ultimately, `automated human feedback` can provide your organization with detailed insight on the quality and readiness of your application for future builds or even production release.  Through exploratory testing and automated feedback loops via `crowdtesting`, a multitude of testers from all around the world can provide real world testing feedback by simulating the experiences of real users to ensure your software is ready for launch.
 
 - Emphasize the importance of human feedback throughout the development life cycle.
 - Focus on the ability of testers to provide detailed insight into uncommon scenarios and unforeseen test cases.
@@ -91,6 +95,7 @@ While most of the automated tasks associated with DevOps tend to focus on managi
 [`Codacy`]: https://www.codacy.com/
 [`Codebeat`]: https://codebeat.co/
 [`pair programming`]: https://en.wikipedia.org/wiki/Pair_programming
+[`Test.io`]: https://test.io/features/
 
 ---
 
