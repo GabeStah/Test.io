@@ -1,4 +1,4 @@
-# User Acceptance Testing: Better, Faster, Stronger
+# User Acceptance Testing: Better, Faster, Stronger [Version 1]
 
 User acceptance testing (`UAT`) is an absolutely necessary process for nearly every piece of software.  Neglecting the usability aspects of a project can lead to poor user experience, unwieldy interfaces, or even build-breaking bugs in some cases.  Even if a worst case scenario doesn't come to fruition, software that passes all traditional test cases, but hasn't been properly tested for user acceptance, is far more likely to cause damage down the line.  These could entail damages your organization's reputation, monetary damages, or even legal damages.
 
