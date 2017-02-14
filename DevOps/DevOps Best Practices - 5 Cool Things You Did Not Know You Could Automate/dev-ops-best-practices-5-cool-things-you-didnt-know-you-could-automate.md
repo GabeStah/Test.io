@@ -1,7 +1,5 @@
 # [OUTLINE] DevOps Best Practices: 5 Cool Things You Didn't Know You Could Automate
 
-> KEYWORD: devops best practices
-
 The combination of software development and information technology operations, better known as `DevOps`, is a broad term used to describe the process of creation and delivery of software.  There are numerous common practices within the spectrum of DevOps that are commonly automated, including: automated testing, continuous integration (`CI`), continuous deployment (`CD`), monitoring, logging, data provisioning, and much more.  While all these facets of DevOps are obviously greatly beneficial throughout the overall software development life cycle, most of these are such common practice that diving too deep into them isn't very ground-breaking.
 
 Instead, in this article we'll aim to explore five somewhat unique things you can automate as part of your DevOps strategy that you may not be aware of or have considered, so let's get to it!
@@ -20,17 +18,6 @@ There are a few clear advantages to implementing `immutable infrastructure` auto
 - **Maintain Integration States**: When a new automated deployment is created, the state of the infrastructure is entirely "reset" along with it.  This ensures that all integrations that your software may rely on will be configured in exactly the same way every time, ensuring if they were tested and working originally, the outcome is the same the next time.
 - **Dependency Management**: As applications change during the development life cycle, it is common to include additional libraries or other dependencies.  With a single, stable `immutable infrastructure` image that is copied and used for each deployment, it makes handling dependencies much simpler.  The base image can be frequently tested and maintained, including all the necessary dependencies, so new deployments are smooth.
 
-- Discuss the definition of `immutable infrastructure` and the difference between normal infrastructure.
-- In particular, emphasize the notion of always _building new_, rather than _changing existing_.
-- Highlight particular examples of this kind of automation, such as Microsoft.
-- Emphasize benefits of this technique, such as simple historical rollback.
-
-https://blog.codeship.com/immutable-infrastructure/
-http://chadfowler.com/2013/06/23/immutable-deployments.html
-http://searchitoperations.techtarget.com/news/450302397/Programmable-infrastructure-fends-off-configuration-drift
-http://searchitoperations.techtarget.com/feature/Immutable-infrastructure-takes-build-automation-to-the-systems-level
-http://searchitoperations.techtarget.com/definition/immutable-infrastructure
-
 ## Automating Regulatory Compliances
 
 While not relevant to every development project, managing proper `regulatory compliance` can be critical for some organizations.  Since most developers lack a background in law, maintaining proper `regulatory compliance` can be a challenge, if and when it is required.
@@ -38,12 +25,6 @@ While not relevant to every development project, managing proper `regulatory com
 Compliance is required in a variety of fields, from government and finance to pharmaceuticals and trade.  The standards of compliance vary from one regulation to the next, but many regulations like [`HIPAA`] and [`PCI`] heavily emphasize confidentiality and privacy.
 
 In spite of the complications associated with `regulatory compliance` during software development, as with many other aspects of DevOps, it's possible to assist with proper compliance through a bit of automation.  [`Some organizations`](http://searchitoperations.techtarget.com/news/450302065/Sparta-counters-DevOps-naysayers-with-compliance-automation) are now finding that they are able to comply with industry regulations through automated DevOps practices, in large part by properly focusing on and maintaining a clear (digital) "paper trail."  Through common automated DevOps practices, it's now much easier for organizations to point to consistent, proven, and verifiable records of compliance.  By using tools like automated testing and deployment, there now exists historical evidence that test cases directly related to regulatory compliance are passing, and automated deployment following those successful tests ensures that compliance is pushed to production.
-
-- Discuss the importance of regulatory compliance in the development community, as it pertains to particular types of projects (government, financial, pharmaceutical, etc).
-- Provide specific examples of automated compliance.
-- Outline the fundamental components of compliance automation by providing a consistent, proven, and verifiable "paper trail" via automated development, testing, and deployment services.
-
-http://searchitoperations.techtarget.com/news/450302065/Sparta-counters-DevOps-naysayers-with-compliance-automation
 
 ## Automating Development Environments
 
@@ -53,22 +34,11 @@ When a new developer joins the team, there's no need to spend hours installing t
 
 There are a number of existing tools that can be used for the creation and management of automated developer environments, but a few popular ones include [`Vagrant`] and [`Chef`].  Each tool comes with its own benefits, but they're all generally designed to be user-friendly, providing a simple API, using a common language or syntax, to create most any configuration as a new development image.
 
-- Automated provisioning of servers is common, but automation can also be used to create development environments, locally or virtually, with identical tools and configurations for all developers across the team.
-- Briefly discuss tools that can be used to easily provision new development environments, locally or via virtual machines (Vagrant, Chef, etc).
-- Highlight the numerous benefits of automating the development environment across the team.
-
-https://www.vagrantup.com/
-
 ## Automating Code Review
 
 While most of the automated tasks associated with DevOps tend to focus on managing code once its written, there's something to be said for the practice of `automatic code reviews`.  In the simplest terms, an `automatic code review` aims to evaluate existing code, using robust services and applications, by checking for proper style, complexity, security, duplication, and coverage... automatically.  There are a number tools that can be used for `automated code review`, including [`Code Climate`], [`Codacy`], and [`Codebeat`], but every service will largely aim to perform the same basic role within your DevOps.
 
 `Automated code review` provides many of the same benefits of the practice known as [`pair programming`], which places two developers at the same desk and has them work in tandem on active development.  Rather than having another human physically sitting with each developer, an automated code review service aims to provide many of those same benefits, by verifying code quality and coverage with simple interfaces; all while being compatible with existing automated DevOps practices such as `continuous integration` and `continuous deployment`.  
-
-- Discuss the basic premise and benefits of `automated code review` throughout development life cycle.
-- Highlight the growth of practices like `pair programming` and how automated code review takes those benefits further with checks for style consistency, coverage, etc.
-- Provide examples of common code review automation tools.
-- Emphasize the compatibility between `continuous integration` practices and `automated code review`.
 
 ## Automating Human Feedback
 
@@ -79,11 +49,6 @@ In the case of `automating human feedback` via `crowdtesting`, this can provide 
 Implementation of `automating crowdtesting feedback` will vary from one tool to the next, but services like [`Test.io`] provide an API to trigger tests based on your own conditional requirements, so feedback can be gathered automatically, alongside your other automated DevOps practices.
 
 Ultimately, `automated human feedback` can provide your organization with detailed insight on the quality and readiness of your application for future builds or even production release.  Through exploratory testing and automated feedback loops via `crowdtesting`, a multitude of testers from all around the world can provide real world testing feedback by simulating the experiences of real users to ensure your software is ready for launch.
-
-- Emphasize the importance of human feedback throughout the development life cycle.
-- Focus on the ability of testers to provide detailed insight into uncommon scenarios and unforeseen test cases.
-- Outline specifics of how some crowdtesting services might provide automation (API calls, recurring contracts, collaborative communication tools, etc).
-- Detail how human feedback can be used to indicate the readiness of agile applications for future builds or even production releases.
 
 ---
 
