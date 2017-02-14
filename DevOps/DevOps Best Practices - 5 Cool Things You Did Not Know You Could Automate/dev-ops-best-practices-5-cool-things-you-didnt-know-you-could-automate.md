@@ -1,4 +1,4 @@
-# DevOps Best Practices: 5 Cool Things You Didn't Know You Could Automate
+# DevOps Best Practices: 5 Cool Things You Didn't Know You Could Automate [Version 1] 
 
 The combination of software development and information technology operations, better known as `DevOps`, is a broadly used term describing the process of creating and delivering software.  Many of the commonly automated practices used in DevOps are already well known, including: automated testing, continuous integration (`CI`), continuous deployment (`CD`), monitoring, logging, data provisioning, and much more.  While all these facets of DevOps are obviously beneficial throughout the overall software development life cycle, most are such common practice that diving too deep into them won't be presenting anything very ground-breaking.
 
