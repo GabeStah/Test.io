@@ -1,4 +1,4 @@
-# What is Regression Testing?
+# What is Regression Testing? [FINAL]
 
 If you’ve worked in software, you probably know what `regression testing`, but  while the Internet is already full of explanations of regression testing, in this article we're taking a different spin on this idea -- that a regression test should be a test, and not merely a check.  We'll explore what regression testing is and where it's most commonly implemented, but we'll also examine why `exploratory testing` should also be considered a key component in any proper regression testing methodology.
 
@@ -18,7 +18,13 @@ It should, therefore, come as no surprise that implementation of an `exploratory
 
 In many cases, a human will catch an unknown issue even where a test case indicates no issue exists.  For example, envision a web project that contains a number of registration fields.  Test cases are developed to A bug is discovered at some point during regression testing that prevented some of the 
 
-For example, if the codebase for a web project is due for a refactoring pass on the systems that handle user sessions (signing in/out, security, navigating, etc.), it can be incredibly beneficial to perform a crowdtesting pass on those systems before any refactoring takes place. More often than not, testers may find bugs or even point to improvements that would dramatically alter the end-result of the system and how it functions, saving a great deal of unnecessary or even wasted coding time during the subsequent `regression testing` procedures.
+For example, imagine a web project with an assortment of standard registration fields that users can fill out.  At some point during regression testing, a bug is discovered that was preventing the `nickname` field from being displayed.  Even after that bug is fixed in the code base and `nickname` is now visible, it's often the case that other elements of the application are broken after this fix, since many previous developer decisions could've been made in the time since the `nickname` field first vanished.
+
+Even more likely, but just as problematic, is the possibility that `test cases` for the previously-hidden `nickname` field **simply don't exist**.  Since the field was all but lost up until this recent discovery and bug fix, it now requires someone to closely examine all related test cases and perhaps create new ones or alter existing cases to also account for this "new" field.
+
+Better known as a `masked defect`, even fairly simple examples of these types of issues can be problematic for the application development process.  In cases where defects alter the behavior to such a degree that it is effectively hidden from the developers, it's common for test cases to fail to notice these issues.
+
+For this reason, it can be incredibly beneficial to perform a `crowdtesting` pass **before** any refactoring pass takes place. More often than not, testers may reveal `masked defects`, or even point to improvements, that would dramatically alter the end-result of the system and how it functions, saving a great deal of unnecessary or even wasted coding time during the subsequent `regression testing` procedures.
 
 ## When is Regression Testing Appropriate?
 
