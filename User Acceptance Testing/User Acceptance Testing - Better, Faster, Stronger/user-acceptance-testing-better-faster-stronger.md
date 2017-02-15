@@ -1,10 +1,10 @@
-# User Acceptance Testing: Better, Faster, Stronger [VERSION 1]
+# User Acceptance Testing: Better, Faster, Stronger [VERSION 2]
 
-User acceptance testing (`UAT`) is an absolutely necessary process for nearly every piece of software.  Neglecting the usability aspects of a project can lead to poor user experience, unwieldy interfaces, or even build-breaking bugs in some cases.  Even if a worst case scenario doesn't come to fruition, software that passes all traditional test cases, but hasn't been properly tested for user acceptance, is far more likely to cause damage down the line.  These could entail damages your organization's reputation, monetary damages, or even legal damages.
+User Acceptance Testing (UAT) is often considered the last testing phase in a software development project. Traditionally, teams send their product out for UAT when all the major functionality is in place and the functional bugs have been fixed. Only then can they determine whether a piece of software actually works the way its users intend. Or, perhaps more often, they don't perform user acceptance testing at all.
 
-Thankfully, you can improve your UAT capabilities and reduce your potential for risk by performing UAT via `crowdtesting`.  `Crowdtesting` can be activated at will, beginning with the first stages of the software development life cycle, so there's no potential risk of waiting to perform UAT until the last minute.  `Crowdtesting` also provides a simple way to gather unique, insightful usability feedback from unique, insightful individuals, working and living across many locales around the world, ensuring your software's usability needs are tested from as many angles as possible.
+Agile development has helped somewhat by breaking development down into shorter sprints, but sprints are often so short that substantive user feedback is hard to obtain within the available time.
 
-In this article, we'll take a deep dive into `crowdtesting`, exploring how it can provide dramatic benefits when compared to traditional user acceptance testing methodologies.
+In this article we'll talk about a better way.
 
 ## Immediate and Continuous UAT
 
