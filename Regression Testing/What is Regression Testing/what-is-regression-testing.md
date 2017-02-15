@@ -1,4 +1,4 @@
-# What is Regression Testing? [FINAL]
+# What is Regression Testing? [VERSION 4, FINAL]
 
 If you’ve worked in software, you probably know what `regression testing`, but  while the Internet is already full of explanations of regression testing, in this article we're taking a different spin on this idea -- that a regression test should be a test, and not merely a check.  We'll explore what regression testing is and where it's most commonly implemented, but we'll also examine why `exploratory testing` should also be considered a key component in any proper regression testing methodology.
 
