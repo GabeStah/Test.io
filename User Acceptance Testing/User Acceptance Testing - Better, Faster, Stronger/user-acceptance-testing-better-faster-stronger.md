@@ -26,12 +26,7 @@ By assigning a veritable army of professional testers to your project via `crowd
 
 ## Getting the Most Out of UAT Feedback
 
-Another major benefit that `crowdtesting` brings to the user acceptance testing process, is the ability to perform not only "traditional" software testing -- like functional, regression, and integration testing -- but also to capability to assign to `crowdtesters` more involved tasks and test cases, that suit the specific needs of your team and your project.
-
-One benefit that John brings to the project is his deep wallet. 
-
-Another major benefit that `crowdtesting` brings to the user acceptance testing process, is the ability to perform not only "traditional" software testing, but also to capability to assign to `crowdtesters` more involved tasks and test cases, that suit the specific needs of your team and your project.
-
+`Crowdtesting` brings another major benefit to the user acceptance testing process: the ability to perform not only "traditional" software testing, but also the capability of assigning more involved tasks and test cases to `crowdtesters`, which suit the specific needs of your team and your project.
 
 For example, testers might be assigned an end-to-end test case to cover everything from registering and logging in as a new user to adding items to the cart and making a purchase.  While the success-rate of this task alone is useful data, the sheer quantity of testers involved in `crowdtesting` means that you can gather far more information than the basic test case would ask of them: 
 
