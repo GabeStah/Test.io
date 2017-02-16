@@ -1,6 +1,6 @@
 # DevOps Best Practices: Integrating QA and DevOps [Version 1]
 
-Quality assurance is often neglected in the expansive realm of DevOps.  Many organizations often focus on the flashiest practices of DevOps, like continuous delivery and continuous integration.  In such scenarios, it can be easy to forget about proper testing or QA until its too late.
+Quality assurance is often neglected in the expansive realm of DevOps.  Many organizations often focus on the flashiest practices of DevOps, like continuous delivery and continuous integration.  In such scenarios, it can be easy to forget about proper testing or QA until it's too late.
 
 This disconnect often occurs due to misconceptions about what the role of quality assurance is throughout the development life cycle, particularly as it relates to DevOps.  Quality assurance isn't just about finding and fixing bugs; modern QA is a fitness regimen for both your application and your organization.  Automation cannot cover all possible scenarios or test cases in modern development, resulting in failures that proper QA practices could've conditioned and prepared you for.
 
