@@ -53,6 +53,10 @@ Remember, modern QA is a fitness regimen for your software.  QA should be a cons
 
 Proper `crowdtesting` and QA integration into DevOps ensures that your application is both stable and robust.  Bugs will be found earlier and more often.  Moreover, human testers provide that extra level of fitness through `continuous improvements`, always moving the goalposts toward those ultimate business objectives.
 
+---
+
+**SOURCES**
+
 - http://www.neotys.com/blog/where-does-qa-fit-in-devops/
 - http://blog.gerrardconsulting.com/?q=node/666
 - https://medium.com/@eon01/the-15-point-devops-check-list-8cd2afb4a448#.8w6zycs7n
