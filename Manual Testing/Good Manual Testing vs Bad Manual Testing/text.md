@@ -1,0 +1,52 @@
+# Good Manual Testing vs Bad Manual Testing [Version 1]
+
+`"Manual testing"` is a term often spoken in hushed tones, by competent yet cautious developers, fearful of the disparaging looks they might receive for its utterance.  Far too many organizations and managers, particularly in the world of rapid and highly-automated `Agile` development, view `manual testing` as some kind of sin; an unnecessary evil, inherently inferior to `automated testing`.
+
+Such a view is misguided at best, and a danger to your organization, your project, or your customers, at worst.  `Manual testing` is a necessity during software development.  It provides the means to locate unforeseen issues and bugs, receive real-world usability feedback, and to fully confirm the readiness of your application for the limelight of production.
+
+We aim to explore not only _why_ `exploratory testing` is extremely useful, but also to further examine both the good and bad practices when implementing `exploratory testing`.
+
+## The Role of Automated Testing
+
+Any argument for the efficacy of `manual testing`, particularly on the Internet, often attempts to frame `automated testing` as an opposing practice; a bipolar negative that cannot (nor should not) compete with `manual testing`.  That isn't our aim, nor our claim in the least.  `Automated testing` is, undoubtedly, an extremely powerful tool throughout many software development life cycles.  `Test-driven development`, and other test-focused practices, have shown `automated testing` to be a fundamental linchpin, necessary to produce quality software.
+
+Therefore, this article aims to entirely dismiss the notion that `automated` and `manual testing` cannot coexist.  In fact, when properly implemented, the two practices have a natural, symbiotic relationship.  Our goal is not to besmirch `automated testing` in anyway, but instead to uplift `manual testing` to its proper station alongside `automated testing`.
+
+## How Manual Testing Can Help
+
+Before we dive into how `manual testing` can help build stronger software, we should briefly identify just what we mean by that term.  Pedants would argue that `manual testing` isn't even an appropriate term in software development, hung up as they are on the notion that "manual" only refers to tasks performed by humans, without the assistance of machines or tools.  Rather than being sticklers about terminology, let's just clarify that for our purposes, `manual testing` refers to any form of software testing performed by humans, in which human brainpower and expertise are a necessity.  Thus, automated `unit testing` would not qualify, but `exploratory testing` would.
+
+With that out of the way, let's take a closer look at just a few of the ways `manual exploratory testing` can be invaluable throughout the development life cycle:
+
+- **Discovering Hidden Issues**: When test cases are initially created, often an existing yet undiscovered bug limits functionality in an unforeseen way.  For example, when a bug unintentionally hides a visual element, often no test case exists that covers that element.  Even after the bug is fixed, some form of testing must be performed to ensure the software functions as expected, since automated tests weren't designed to cover this particular issue.  `Manual exploratory testing` often discovers issues like this, while also allowing for exploration to take place prior to any refactoring, saving time and unnecessary coding in the future.
+- **Real-World Feedback**: Testers, particularly those from `crowdtesting` services, are able to provide usability feedback that closely resembles feedback that your customers might have.  Since `crowdtesters` are working and testing out in the wild, their feedback is invaluable when examining the quality of the software from real user perspectives.
+- **Robust Device Coverage**: `Crowdtesters` use a wide range of devices and platforms to access your software.  This ensures that your project is analyzed across the spectrum of devices, browsers, operating systems, and so forth, from real users out in the world.  Why rely on _simulations_ of different devices, when _actual_ devices can be used instead?
+- **Localized or Global Users**: Testers can be found from virtually any locale and hired with your particular demographic or regional requirements in mind.  Whether this is localized to your area or globalized with users from across the planet, `manual testing` provides real human feedback from people that may not have your own biases or insights, so their evaluations are genuine and insightful.
+- **Scalable Testing Teams**: Just as `automated testing` suites can be scaled, depending on the necessary test coverage or iterations that are required, `manual testing` through `crowdtesting` can be scaled as well, adding as many testers as you desire.  Additionally, scaling the `crowdtesting` for your project requires no additional work on the part of your team or organization; just ask for the scaling to be adjusted and it's done. 
+
+## Good Manual Testing Practices
+
+Now that we've seen a few of benefits that `manual exploratory testing` can bring to your project, it's also important to examine some good ways to actually implement that `manual testing`.
+
+- **Exploratory Testing of New Features**: The most obvious gap to fill with `manual testing` is to perform `manual exploratory testing` when new features are added to the system.  If ever there is a moment in the software development life cycle when new bugs or issues can crop up, which weren't caught by test cases, it's when a new feature is released.  `Manual testers` ensure that not only does the feature work as expected, but they can explore every facet of the feature, uncovering bugs or potential future issues that developers may not have considered.
+- **Prerelease Manual Regression Testing**: Performing manual testing as part of the regression test cycle can be a huge benefit, particularly for regression testing prior to a release.  This provides a great deal of new eyes on the product during this critical period, ensuring that every 'I' is dotted and every 'T' is crossed, and there's no unforeseen problems, which your customers would otherwise experience after release.  Even when automated regression tests have passed, the insight of professional, manual testers cannot be discounted, and guarantees a proper level of polish.
+- **Manual Test Cases During Rapid Changes**: Many modern development life cycles have adopted `Agile`-infused methodologies, in order to take advantage of the many benefits, including rapid iteration and release cycles.  However, this rapid rate of change presents a potential danger.  Every alteration to components or change in code presents another potential bug or system issue.  Even when all changes have associated test cases, it's often a good practice to have `manual testers` sit down and monitor the execution of test cases.  Not only can testers ensure automated tests are behaving as expected, but they can generate scripted test cases to double-check recently updated code.
+
+## Bad Manual Testing Practices
+
+While `manual testing` is a good idea in general, there are cases where improper implementation leads to more harm than good.  While this list is by no means exhaustive, these examples should provide you with a few basic guidelines on how to avoid bad `manual testing` practices.
+
+- **Developer-Driven Manual Test Cases**: It's an easy trap to fall into as a developer -- that desire to throw together a simple manual test for that new bit of code you just added.  Repeat this a few times, however, and before you know it, the testing suite is a mess, the code is just as sloppy, and you're spending more time fixing manual test cases, as a developer, than simply writing new code or refactoring existing code.  This is particularly problematic when projects lack any proper unit, integration, or functional tests.  Rather than _forcing_ a unsustainable form of `manual testing` driven by developers, it's better to allow developers to focus on refactoring and improving code, to make it more testable, while allowing professional testers, via `crowdtesting` or otherwise, to perform any necessary `manual testing`.
+- **QA-Driven Manual Tests**: Even for organizations with the resources for dedicated quality assurance personnel, asking the QA team to perform `manual testing` is often a waste of their time and efforts, especially when other QA tasks need to be performed.  If QA can be improving your automated workflow or configuring the test infrastructure, those are tasks well-suited to that team.  `Manual testing`, on the other hand, can then be executed by `crowdtesters` outside the organization, freeing up the quality assurance members to improve the process elsewhere.
+- **Improper Bug Reporting and Tracking**: When all else fails and `manual testing` must be performed by a developer or QA member, it does virtually no good if there isn't a strong infrastructure already setup for tracking and reporting bugs.  Testers should have a centralized system to track bugs, and everyone using it should be fully aware of the proper syntax and etiquette used to write up reports.  If there aren't clear steps to reproduce bugs -- which should be easily tracked in a central location -- then `manual testing` may do more harm than good.
+
+Ultimately, `manual testing` is a powerful tool during software development, but it must be smartly implemented.  Allow developers and the QA team to focus on what they do best (writing clean code and executing automated testing), while simultaneously placing the burden of proper `manual testing` only professional testers via `crowdtesting` services.  With `crowdtesters` on the manual end and developers on the automated end, the project will be naturally balanced, and you can rest assured that your software is ready for production release, into the earnest hands of your customers.
+
+---
+
+**SOURCES**
+
+- http://www.base36.com/2013/03/automated-vs-manual-testing-the-pros-and-cons-of-each/
+- http://www.developsense.com/blog/2013/02/manual-and-automated-testing/
+- http://ronjeffries.com/xprog/articles/manual-testing-does-exist-and-it-is-bad/
+- http://qablog.practitest.com/bringing-manual-and-automated-testing-together/
