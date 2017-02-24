@@ -1,4 +1,4 @@
-# Types of Automation Testing - Landscape [Version 1]
+# Types of Automation Testing: Landscape [Version 1]
 
 As we enter into the new year, the prevalence of testing automation trends continue to shift.  While some tried-and-true practices remain as relevant today as they were a few years ago, others are rapidly rising to the limelight.
 
