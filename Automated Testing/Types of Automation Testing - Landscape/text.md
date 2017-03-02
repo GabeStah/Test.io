@@ -52,20 +52,6 @@ Mobile testing presents a particularly challenging task, as it requires function
 
 Automating some of these mobile testing tasks can dramatically improve turnaround time and better prepare your software for production.  However, it's important to recognize that mobile test results tend to be flaky, given the prevalence of running `automated mobile tests` on emulators, rather than real world devices.  The actionable feedback these tests provide, therefore, is only as good as the reliability of the systems they're running on.
 
-## Virtualization, Containerization, and Immutable Infrastructure
-
-`Virtualization` provides the ability for testing to take place in a virtual environment, ensuring testing platforms are simple to create, maintain, or destroy.  While performing tests in virtual space presents numerous advantages, it also requires additional resources within the test hardware.
-
-The `containerization` trend attempts to resolve some of the drawbacks of virtualization, by bundling together all packaging, shipment, and deployment software components into a (relatively) lightweight container.  Services, like [Docker](https://www.docker.com/), allow containers to be created with specific purposes in mind, including automated test execution.
-
-`Immutable infrastructures` expand even further on these ideas, by encouraging the use of `containers` (or `virtual machines`) that are _unchangeable_ after deployment takes place.  When combined with concepts like containers, immutable infrastructures are the ultimate assurance that tests are performed on the cleanest, most robust platform possible.
-
-## Configuration Management Automation
-
-Modern infrastructure creation and configuration is highly dependent on tools such as [Chef](https://www.chef.io/), [Puppet](https://puppet.com/), or the aforementioned [Docker](https://www.docker.com/).  These tools simplify the process of configuring your software for integrations, physical hardware, and infrastructure.
-
-To expand upon their power, many of these tools can be automated in their own right, allowing for an automated testing process _of_ the `automated configuration` used in your system.
-
 ## Crowdtest Automation
 
 `Automated Crowdtesting` allows for human-powered testing to be performed at the same efficiency and speed as other forms of automated testing.  Most `crowdtesting` services provide programmatic API calls, allowing for automated test generation and feedback from a wide range of professional testers.
