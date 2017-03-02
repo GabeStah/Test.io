@@ -10,7 +10,7 @@ No modern automated software testing suite would be complete without the inclusi
 
 Since unit tests are most commonly created by developers, the trend toward automating unit testing should come as no surprise.  By automating the execution and analysis of unit tests, developers can generally be freed up to focus more on producing quality code.
 
-Unit tests give immediate, specific feedback about what's going on in the code, thereby helping to confirm that the code performs the tasks its intended to.  While improperly implemented unit tests can be a dangerous crutch, properly executed tests should not produce any false-positives.
+Unit tests give immediate, specific feedback about what's going on in the code, thereby helping to confirm that the code performs the tasks it's intended to.  While improperly implemented unit tests can be a dangerous crutch, properly executed tests should not produce any false-positives.
 
 ## Integration Test Automation
 
