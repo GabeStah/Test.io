@@ -2,13 +2,7 @@
 
 As we enter into the new year, the prevalence of testing automation trends continue to shift.  While some tried-and-true practices remain as relevant today as they were a few years ago, others are rapidly rising to the limelight.
 
-In this article we'll examine the current and future trends of the automation testing landscape.  We'll dig down a bit into each concept, while hopefully introducing you to a few new ideas for your own automated testing practices in the future.
-
-## Functional Test Automation
-
-Functional testing helps to verify that your software is doing _what_ it should, without worrying about how it does it.  This often takes the form of verifying the functionality of the interface or other end-to-end components, without the need to dive into the code that powers it.
-
-`Automated functional testing` expands on these benefits, by allowing your organization to frequently execute functional tests and verify the results, often without human intervention.  Teams can develop a suite of appropriate functional tests, plug them into an automated tool or execution script, and rest easier knowing that all functional tests will be performed automatically.
+In this article we'll explore the current automation testing landscape.  We'll dig down a bit into each concept, while hopefully introducing you to a few new ideas for your own automated testing practices in the future.
 
 ## Unit Test Automation
 
@@ -16,23 +10,47 @@ No modern automated software testing suite would be complete without the inclusi
 
 Since unit tests are most commonly created by developers, the trend toward automating unit testing should come as no surprise.  By automating the execution and analysis of unit tests, developers can generally be freed up to focus more on producing quality code.
 
+Unit tests give immediate, specific feedback about what's going on in the code, thereby helping to confirm that the code performs the tasks its intended to.  While improperly implemented unit tests can be a dangerous crutch, properly executed tests should not produce any false-positives.
+
+## Integration Test Automation
+
+`Integration testing` is a means by which multiple, independent components of the system are tested with one another.  While these components may be independent, that isn't to suggest they are not interconnected within the context of the software.  For example, a database layer is independent of the functional code, but the two must work together to ensure changes made by a user are reflected in the database, and vice versa.
+
+Proper `integration testing` is a necessity for all but the simplest applications.  Most modern projects will rely on many integrations and third-party components, including data layers, content delivery networks, email services, benchmarking/load testing, deployment infrastructure, analytics... the list goes on and on.  While the overall testing demands will differ from one integration to the next, it's critical that all integrations function as expected, particularly when new builds are pushed or massive changes are coming down the pike.
+
+`API integration testing` is an important subset of `integration testing`, which focuses on testing your software's integration with any third-party APIs you may be using.  Many service APIs provide their own language-specific software development kit (`SDK`), which can be used directly in code in order to access their service.  On the other hand, a far more common implementation of service APIs is to provide a `representational state transfer` (`RESTful`) web service to clients.  By sending appropriate data to specific URIs of the service, along with a valid [`HTTP Request Method`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) verb, the service will return a response, indicating a successful transaction, or even an error, when applicable.
+
+## Load Test Automation
+
+Load testing is a crucial benchmark for many software projects these days, particularly for apps targeted at mobile devices and users.  Accurately measuring both normal and peak load for your system ensures your team can better plan for production launch.
+
+`Automated load testing` tools allows load testing to be performed on-demand, if not constantly.  In fact, by performing nightly load tests, you'll often catch non-functional problems that you may have introduced during development the day before.  Consequently, `load testing` will continue to remain a cheap and effective solution for most projects where scalability is (or will be) a factor.
+
+## Functional Test Automation
+
+Functional testing helps to verify that your software is doing _what_ it should, without worrying about how it does it.  This often takes the form of verifying the functionality of the interface or other end-to-end components, without the need to dive into the code that powers it.
+
+`Automated functional testing` expands on these benefits, by allowing your organization to frequently execute functional tests and verify the results, often without human intervention.  Teams can develop a suite of appropriate functional tests, plug them into an automated tool or execution script, and rest easier knowing that all functional tests will be performed automatically.
+
+Of course, `automated functional testing` isn't a cure-all for every potential functional problem.  Such tests have a tendency to be flaky when not properly maintained or monitored, particularly during rapid changes or leading up to a new feature release.
+
 ## Regression Test Automation
 
 `Automated regression testing` remains one of the most common testing trends, and for good reason.  As the software development life cycle progresses and new features are added, each iterative build invariably adds more and more tests onto the test suite pile.  As components become more complicated and functionality expands, executing necessary regression tests becomes a major burden when performed in-house.
 
 Many organizations look to automation as a method to improve regression testing efficiency.  Tests can now be developed with automation in mind, which is particularly relevant in `agile`-style projects that heavily emphasize frequent iteration and aggressive release schedules.
 
+Differentiating between (and properly prioritizing) the various types of tests that fall under the umbrella of `regression testing` can be challenging.  Unit testing, integration testing, and functional testing are all performed on their own right, but then each has a regressive form as well that must organized and executed during the `regression testing` process.  All told, this transforms the `regression test suite` into a rather massive and often unwieldy behemoth; an amalgamation of all manner of tests, taken from the typical test type trio.
+
+To alleviate some of this pressure when performing `regression testing`, it's often preferable to breakup the `regression test suite` into smaller subsets of functional tests, which can be run with each build, without the additional burden that comes from regressively testing everything in the system all at once.
+
 ## Mobile Test Automation
 
 Mobile is here to stay, as mobile device adoption rates continue to rise, particularly throughout developing countries.  And as internet accessibility grows to meet the demands of those extra users, proper `mobile automated testing` will remain a high priority for many organizations.
 
-Mobile testing presents a particularly challenging task, as it requires functional, compatibility, performance, UI/UX, and security testing, all rolled into one.  Automating some of these mobile testing tasks can dramatically improve turnaround time and better prepare your software for production.
+Mobile testing presents a particularly challenging task, as it requires functional, compatibility, performance, UI/UX, and security testing, all rolled into one.  By and large, `automated mobile testing` expands on the requirements of typical `automated functional testing`, but with the additional requirements of running on real (or simulated) devices.
 
-## Load Test Automation
-
-Load testing is a crucial benchmark for many software projects these days, particularly for apps targeted at mobile devices and users.  Accurately measuring both normal and peak load for your system ensures your team can better plan for production launch.
-
-`Automated load testing` tools allows load testing to be performed on-demand, if not constantly.  This form of automated testing will continue to remain a cheap and effective solution for most projects where scalability is (or will be) a factor.
+Automating some of these mobile testing tasks can dramatically improve turnaround time and better prepare your software for production.  However, it's important to recognize that mobile test results tend to be flaky, given the prevalence of running `automated mobile tests` on emulators, rather than real world devices.  The actionable feedback these tests provide, therefore, is only as good as the reliability of the systems they're running on.
 
 ## Virtualization, Containerization, and Immutable Infrastructure
 
